@@ -119,7 +119,7 @@ body {
 /* Ajustes para pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .bob-container {
-    background-image: url("/img/FondoCelular.jpg");
+    background-image: url("/img/FondoC.png");
     background-attachment: scroll; /* Mejora compatibilidad en móviles */
     padding: 20px;
     justify-content: flex-start; /* Empieza desde arriba */
