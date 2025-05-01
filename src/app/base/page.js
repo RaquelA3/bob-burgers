@@ -125,6 +125,7 @@ const Base = () => {
                     </div>
                     {submenuAbierto === "table" && (
                     <div className="submenu">
+                        <span>Seasons</span>
                         <span>Season 1</span>
                         <span>Season 2</span>
                         <span>Season 3</span>
@@ -201,57 +202,57 @@ const Base = () => {
                         <label>Episode {index + 1}</label>
                         {index === 0 ? (
                         <a
-                            href="https://drive.google.com/file/d/1_ve0IHgyx5QFII3NYjXw-67ffyx400u1/view?usp=sharing"
+                            /* href="https://drive.google.com/file/d/1_ve0IHgyx5QFII3NYjXw-67ffyx400u1/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                        > 
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
 
                         ) : index === 1 ? (
                         <a
-                            href="https://drive.google.com/file/d/1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp/view?usp=sharing"
+                           /*  href="https://drive.google.com/file/d/1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
                         ) : index === 2 ? (
                         <a
-                            href="https://drive.google.com/file/d/1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW/view?usp=sharing"
+                            /* href="https://drive.google.com/file/d/1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                          >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
                         ) : index === 3 ? (
                         <a
-                            href="https://drive.google.com/file/d/1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t/view?usp=sharing"
+                          /*   href="https://drive.google.com/file/d/1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
                         ) : index === 4 ? (
                         <a
-                            href="https://drive.google.com/file/d/18sP_92PnvX8y7rUa4mOYv97syDCcYlXA/view?usp=sharing"
+                            /* href="https://drive.google.com/file/d/18sP_92PnvX8y7rUa4mOYv97syDCcYlXA/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
                         ) : index === 5 ? (
                         <a
-                            href="https://drive.google.com/file/d/1zZaNn0e0l5O2_Ln7OUefk_vslh_mwueZ/view?usp=sharing"
+                           /*  href="https://drive.google.com/file/d/1zZaNn0e0l5O2_Ln7OUefk_vslh_mwueZ/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`}/>
+                            <img className="episodioG" src={imagenes.iconEpisodio} alt={`Episodio ${index + 1}`} onClick={() => router.push('/reproductorvideo')}/>
                         </a>
 
                         ) : (
@@ -259,6 +260,7 @@ const Base = () => {
                             className="episodioG"
                             src={imagenes.iconEpisodio}
                             alt={`Episodio ${index + 1}`}
+                            onClick={() => router.push('/reproductorvideo')}
                         />
                         )}
                     </div>

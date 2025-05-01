@@ -8,6 +8,7 @@ export default function Home() {
         <ul>
           <li><Link href="/inicio"> Inicio</Link></li>
           <li><Link href="/base"> Base</Link></li>
+          <li><Link href="/reproductorvideo"> ReproductorV</Link></li>
         </ul>
       </nav>
     </div>
