@@ -7,6 +7,7 @@ export default function Home() {
       <nav>
         <ul>
           <li><Link href="/inicio"> Inicio</Link></li>
+          <li><Link href="/base"> Base</Link></li>
         </ul>
       </nav>
     </div>

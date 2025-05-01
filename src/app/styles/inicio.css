@@ -120,7 +120,7 @@ body {
 @media (max-width: 768px) {
   .bob-container {
     background-image: url("/img/FondoC.png");
-    background-attachment: scroll; /* Mejora compatibilidad en móviles */
+    background-attachment: scroll; 
     padding: 20px;
     justify-content: flex-start; /* Empieza desde arriba */
   }
@@ -137,8 +137,8 @@ body {
     position: relative;
     top: auto;
     left: auto;
-    transform: translateX(-7%);
-    font-size: 2rem;
+    transform: translateX(-6.5%);
+    font-size: 3rem;
     color: #ffe100;
     margin-bottom: 10px;
   }
@@ -172,7 +172,7 @@ body {
   }
   
   .form-group > .inicio {
-    color: rgb(102, 101, 101);
+    color: rgb(255, 255, 255);
   }
 
   .botonComenzar {
@@ -186,6 +186,8 @@ body {
     display: block;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    color: #fffff9;
+    font-family: 'Roboto';
   }
 
   .botonComenzar:hover{

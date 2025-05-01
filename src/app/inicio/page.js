@@ -28,7 +28,7 @@ const Inicio = () => {
 
       <div className='boton-container'>
       <button className='botonComenzar' 
-        onClick={() => router.push('../registro/page.js')}  
+        onClick={() => router.push('/base')}  
       >
          Comenzar a ver
       </button>
