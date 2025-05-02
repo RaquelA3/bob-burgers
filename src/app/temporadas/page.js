@@ -1,20 +1,19 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import '../styles/reproductorvideo.css';
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import React from 'react';
+import '../styles/temporadas.css';
 
-const ReproductorV = () => {
+const Temporadas = () => {
     const router = useRouter();
     const [menuAbierto, setMenuAbierto] = useState(false);
     const [submenuAbierto, setSubmenuAbierto] = useState("");
-    const [loading, setLoading] = useState(true);  // Estado para saber si el video está cargado
 
     const imagenes = {
         iconomenu:  "../img/icon-menuDesplegable.png",
         tituloE: "../img/tituloEncabezado.webp",
-        user: "../img/foto-user.png",
+        user: "../img/foto-user.png", 
+        iconEpisodio: "../img/episodioGeneral.jpg",
         logomenu: "../img/logo.ico",
         home: "../img/home.png",
         lista: "../img/lista.png",
@@ -41,63 +40,18 @@ const ReproductorV = () => {
         temp15: "../img/Temp15.webp",   
     };
 
-    //Esta parte es para poner el ID de los videos de Drive
-    const videoLinks = {
-        //Temporada 1
-        1: {
-            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
-            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
-            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
-        },
-
-        //2 Temporada
-        2: {
-            1: '',
-        }
-        //Aqui pongo las demas temporadas
-    };
-
-    //Esto sirve para guardar la informacion de los videos
-    const [season, setSeason] = useState('');
-    const [episode, setEpisode] = useState('');
-    const [videoId, setVideoId] = useState('');
-
-    //Esto busca el video, a travez de la temporada y el episodio,
-    //si esta disponible lo pone, sino te manda un alert
-    const handlePlay = () => {
-        const id = videoLinks[season]?.[episode];
-        if(id){
-            setVideoId(id);
-        } else{
-            alert("El video no esta disponible aun.");
-        }
-    };
-
-    // Función para hacer que el video se cargue antes de mostrarlo
-    useEffect(() => {
-        if (videoId) {
-            // La carga previa del video
-            const videoElement = document.createElement('iframe');
-            videoElement.src = `https://drive.google.com/file/d/${videoId}/preview`;
-            videoElement.style.display = 'none'; // No mostrarlo
-            document.body.appendChild(videoElement); // Agregarlo al DOM
-            videoElement.onload = () => {
-                setLoading(false); // Marcar el video como listo para mostrar
-            };
-        }
-    }, [videoId]);
 
     return (
-         <div className='bob-container3'>
-             <link rel='icon' href='/img/logo.ico'/>
-             <header className='encabezado'>
+        <div className="bob-container4">
+             <link rel="icon" href="/img/logo.ico"></link>
+             <header className="encabezado">
                  <img className="menu" src={imagenes.iconomenu} alt="icono menu" onClick={() => setMenuAbierto(!menuAbierto)}/>  
                  <img className="tituloE" src={imagenes.tituloE} alt="tituloE" onClick={() => router.push('/inicio')} />  
                  <img className="user" src={imagenes.user} alt="foto usuario" onClick={() => router.push('/inicio')}/>  
              </header>
 
-             {/*  Esto es del menu menu desplegable */}
-           {menuAbierto && (
+             {/* Esto es del menu desplegable */}
+             {menuAbierto && (
                 <div className="sidebar">
                     <div className="sidebar-header">
                     <img className="Logomenu" src={imagenes.logomenu} alt="icono menu"/>  
@@ -137,6 +91,7 @@ const ReproductorV = () => {
                         <span>Season 13</span>
                         <span>Season 14</span>
                         <span>Season 15</span>
+                        
                     </div>
                     )}
 
@@ -144,6 +99,7 @@ const ReproductorV = () => {
                     <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"/>  
                     <span> Favorites</span>
                     </div>
+
 
                     <span className="section-title">GENERAL</span>
                     
@@ -170,51 +126,34 @@ const ReproductorV = () => {
                         <span className="name-user">Raquel Amezcua</span>
                     </div>
                 </div>
-            )}
-            
-            <div className='episodio-group'>
-                <h2 className='titulo'>Bob Burgers</h2>
+                )}
 
-                <div className='cuadro-video'>
-                {videoId ? (
-                    loading ? (
-                        <p>Cargando video...</p>  // Mostrar mensaje mientras carga
-                    ) : (
-                        <iframe className='detalles-video'
-                            src={`https://drive.google.com/file/d/${videoId}/preview`}
-                            title="Google Drive Video"
-                            allow="autoplay; fullscreen" 
-                            allowFullScreen
-                        />
-                    )
-                    ) : (
-                    <div className='minititulo'>
-                        <span>Selecciona temporada y episodio</span>
-                    </div>
-                    )}
+                
+                
+                <h2 className="titulo-temporadas">Season List</h2>
+                
+                <div className="cuadro-temporadas">
+                     <img className="Temporada1" src={imagenesTemporadas.temp1} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada2" src={imagenesTemporadas.temp2} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada3" src={imagenesTemporadas.temp3} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada4" src={imagenesTemporadas.temp4} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada5" src={imagenesTemporadas.temp5} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+
+                     <img className="Temporada6" src={imagenesTemporadas.temp6} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada7" src={imagenesTemporadas.temp7} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada8" src={imagenesTemporadas.temp8} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada9" src={imagenesTemporadas.temp9} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada10" src={imagenesTemporadas.temp10} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+
+                     <img className="Temporada11" src={imagenesTemporadas.temp11} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada12" src={imagenesTemporadas.temp12} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada13" src={imagenesTemporadas.temp13} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada14" src={imagenesTemporadas.temp14} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada15" src={imagenesTemporadas.temp15} alt="icono menu" onClick={() => router.push('/inicio')}/>        
                 </div>
 
-                <div className='botones'>
-                    <select value={season} onChange={(e) => setSeason(e.target.value)}>
-                        <option  value="">Temporada</option>
-                        {[...Array(15)].map((_, i) => (
-                            <option key={i + 1} value={i + 1}>Temporada {i + 1}</option>
-                         ))}
-                    </select>
-
-                    <select value={episode} onChange={(e) => setEpisode(e.target.value)}>
-                        <option value="">Episodio</option>
-                        {[...Array(25)].map((_, i) => (
-                            <option key={i + 1} value={i + 1}>Episodio {i + 1}</option>
-                        ))}
-                    </select>
-
-                    <button className='boton-Go' onClick={handlePlay}>Go</button>
-                </div>
-            </div>  
-
-         </div>
+        </div>
     )
 }
 
-export default ReproductorV;
+export default Temporadas;

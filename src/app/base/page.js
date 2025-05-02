@@ -1,8 +1,9 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import '../styles/base.css';
 import { useState, useEffect } from "react";
+import '../styles/base.css';
+
 
 const Base = () => {
     const router = useRouter();
@@ -125,7 +126,7 @@ const Base = () => {
                     </div>
                     {submenuAbierto === "table" && (
                     <div className="submenu">
-                        <span>Seasons</span>
+                        <span onClick={() => router.push('/temporadas')}>Seasons</span>
                         <span>Season 1</span>
                         <span>Season 2</span>
                         <span>Season 3</span>
