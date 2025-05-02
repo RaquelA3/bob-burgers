@@ -127,22 +127,21 @@ const Base = () => {
                     {submenuAbierto === "table" && (
                     <div className="submenu">
                         <span onClick={() => router.push('/temporadas')}>Seasons</span>
-                        <span>Season 1</span>
-                        <span>Season 2</span>
-                        <span>Season 3</span>
-                        <span>Season 4</span>
-                        <span>Season 5</span>
-                        <span>Season 6</span>
-                        <span>Season 7</span>
-                        <span>Season 8</span>
-                        <span>Season 9</span>
-                        <span>Season 10</span>
-                        <span>Season 11</span>
-                        <span>Season 12</span>
-                        <span>Season 13</span>
-                        <span>Season 14</span>
-                        <span>Season 15</span>
-                        
+                        <span onClick={() => router.push('/detallesTemporada/Temporada1')}>Season 1</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada2')}>Season 2</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada3')}>Season 3</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada4')}>Season 4</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada5')}>Season 5</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada6')}>Season 6</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada7')}>Season 7</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada8')}>Season 8</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada9')}>Season 9</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada10')}>Season 10</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada11')}>Season 11</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>        
                     </div>
                     )}
 

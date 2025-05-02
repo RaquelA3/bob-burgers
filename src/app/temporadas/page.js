@@ -75,23 +75,22 @@ const Temporadas = () => {
                     </div>
                     {submenuAbierto === "table" && (
                     <div className="submenu">
-                        <span onClick={() => router.push('/temporadas')}>Seasons</span>
-                        <span>Season 1</span>
-                        <span>Season 2</span>
-                        <span>Season 3</span>
-                        <span>Season 4</span>
-                        <span>Season 5</span>
-                        <span>Season 6</span>
-                        <span>Season 7</span>
-                        <span>Season 8</span>
-                        <span>Season 9</span>
-                        <span>Season 10</span>
-                        <span>Season 11</span>
-                        <span>Season 12</span>
-                        <span>Season 13</span>
-                        <span>Season 14</span>
-                        <span>Season 15</span>
-                        
+                       <span onClick={() => router.push('/temporadas')}>Seasons List</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada1')}>Season 1</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada2')}>Season 2</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada3')}>Season 3</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada4')}>Season 4</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada5')}>Season 5</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada6')}>Season 6</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada7')}>Season 7</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada8')}>Season 8</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada9')}>Season 9</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada10')}>Season 10</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada11')}>Season 11</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
+                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>        
                     </div>
                     )}
 
@@ -133,23 +132,23 @@ const Temporadas = () => {
                 <h2 className="titulo-temporadas">Season List</h2>
                 
                 <div className="cuadro-temporadas">
-                     <img className="Temporada1" src={imagenesTemporadas.temp1} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada2" src={imagenesTemporadas.temp2} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada3" src={imagenesTemporadas.temp3} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada4" src={imagenesTemporadas.temp4} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada5" src={imagenesTemporadas.temp5} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada1" src={imagenesTemporadas.temp1} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada1')}/>  
+                     <img className="Temporada2" src={imagenesTemporadas.temp2} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada2')}/>  
+                     <img className="Temporada3" src={imagenesTemporadas.temp3} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada3')}/>  
+                     <img className="Temporada4" src={imagenesTemporadas.temp4} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada4')}/>  
+                     <img className="Temporada5" src={imagenesTemporadas.temp5} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada5')}/>  
 
-                     <img className="Temporada6" src={imagenesTemporadas.temp6} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada7" src={imagenesTemporadas.temp7} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada8" src={imagenesTemporadas.temp8} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada9" src={imagenesTemporadas.temp9} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada10" src={imagenesTemporadas.temp10} alt="icono menu" onClick={() => router.push('/inicio')}/>  
+                     <img className="Temporada6" src={imagenesTemporadas.temp6} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada6')}/>  
+                     <img className="Temporada7" src={imagenesTemporadas.temp7} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada7')}/>  
+                     <img className="Temporada8" src={imagenesTemporadas.temp8} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada8')}/>  
+                     <img className="Temporada9" src={imagenesTemporadas.temp9} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada9')}/>  
+                     <img className="Temporada10" src={imagenesTemporadas.temp10} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada10')}/>  
 
-                     <img className="Temporada11" src={imagenesTemporadas.temp11} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada12" src={imagenesTemporadas.temp12} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada13" src={imagenesTemporadas.temp13} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada14" src={imagenesTemporadas.temp14} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                     <img className="Temporada15" src={imagenesTemporadas.temp15} alt="icono menu" onClick={() => router.push('/inicio')}/>        
+                     <img className="Temporada11" src={imagenesTemporadas.temp11} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada11')}/>  
+                     <img className="Temporada12" src={imagenesTemporadas.temp12} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada12')}/>  
+                     <img className="Temporada13" src={imagenesTemporadas.temp13} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada13')}/>  
+                     <img className="Temporada14" src={imagenesTemporadas.temp14} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada14')}/>  
+                     <img className="Temporada15" src={imagenesTemporadas.temp15} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada14')}/>        
                 </div>
 
         </div>
