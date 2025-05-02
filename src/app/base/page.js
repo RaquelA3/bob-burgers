@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import '../styles/base.css';
 
-
 const Base = () => {
     const router = useRouter();
     const [menuAbierto, setMenuAbierto] = useState(false);
@@ -179,21 +178,22 @@ const Base = () => {
                 )}
 
 
-
-
-
-
-
-
-
-
-
-
+            {/* Carrusel de imagenes de cada temporada con links */}
             <div className="carrusel-container">
-                {getVisibleImages().map((src, i) => (
-                    <img key={i} src={src} alt={`Temporada ${i}`} className="carrusel-img" />
-                ))}
+                {getVisibleImages().map((src, i) => {
+                    const realIndex = currentIndex + i; // índice real de la imagen
+                    return (
+                        <img
+                            key={realIndex}
+                            src={src}
+                            alt={`Temporada ${realIndex + 1}`}
+                            className="carrusel-img"
+                            onClick={() => router.push(`/detallesTemporada/Temporada${realIndex + 1}`)}
+                        />
+                    );
+                })}
             </div>
+
 
             {mounted && (
                 <div className="episodios">
@@ -267,10 +267,7 @@ const Base = () => {
                     ))}
                 </div>
                 )}
-
-
-
-
+            
         </div>  
     );
 };

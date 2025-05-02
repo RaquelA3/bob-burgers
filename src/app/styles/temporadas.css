@@ -184,6 +184,10 @@
     font-size: 14px;
   }
 
+
+
+
+  /* Cuadricula de lsa temporadas */  
   .titulo-temporadas {
     font-size: 20px;
     font-family: sans-serif;
@@ -194,7 +198,6 @@
     font-weight: 500;
   }
 
-  /* Cuadricula de lsa temporadas */ 
   .cuadro-temporadas {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 columnas */
