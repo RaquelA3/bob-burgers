@@ -1,14 +1,21 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import '../styles/reproductorvideo.css';
 import { useState, useEffect } from "react";
 import React from 'react';
 
 const ReproductorV = () => {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const initialSeason = searchParams.get('season') || '';
+    const initialEpisode = searchParams.get('episode') || '';
+
     const [menuAbierto, setMenuAbierto] = useState(false);
     const [submenuAbierto, setSubmenuAbierto] = useState("");
+    const [season, setSeason] = useState(initialSeason);
+    const [episode, setEpisode] = useState(initialEpisode);
+    const [videoId, setVideoId] = useState('');
     const [loading, setLoading] = useState(true);  // Estado para saber si el video está cargado
 
     const imagenes = {
@@ -23,23 +30,6 @@ const ReproductorV = () => {
         salir: "../img/salir.png"
     };
 
-    const imagenesTemporadas = {
-        temp1: "../img/Temp1.png",
-        temp2: "../img/Temp2.webp",
-        temp3: "../img/Temp3.webp",
-        temp4: "../img/Temp4.webp",   
-        temp5: "../img/Temp5.webp",   
-        temp6: "../img/Temp6.webp",   
-        temp7: "../img/Temp7.webp",   
-        temp8: "../img/Temp8.webp",   
-        temp9: "../img/Temp9.webp",   
-        temp10: "../img/Temp10.png",   
-        temp11: "../img/Temp11.webp",   
-        temp12: "../img/Temp12.webp",   
-        temp13: "../img/Temp13.webp",   
-        temp14: "../img/Temp14.webp",   
-        temp15: "../img/Temp15.webp",   
-    };
 
     //Esta parte es para poner el ID de los videos de Drive
     const videoLinks = {
@@ -52,37 +42,50 @@ const ReproductorV = () => {
 
         //2 Temporada
         2: {
-            1: '',
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        3: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
         }
+
         //Aqui pongo las demas temporadas
     };
-
-    //Esto sirve para guardar la informacion de los videos
-    const [season, setSeason] = useState('');
-    const [episode, setEpisode] = useState('');
-    const [videoId, setVideoId] = useState('');
 
     //Esto busca el video, a travez de la temporada y el episodio,
     //si esta disponible lo pone, sino te manda un alert
     const handlePlay = () => {
         const id = videoLinks[season]?.[episode];
-        if(id){
+        if (id) {
             setVideoId(id);
-        } else{
-            alert("El video no esta disponible aun.");
+            setLoading(true); // Reinicia el estado de carga
+        } else {
+            alert("El video no está disponible aún.");
+            setVideoId('');
         }
     };
 
+
     // Función para hacer que el video se cargue antes de mostrarlo
     useEffect(() => {
+        if (season && episode) {
+            handlePlay();
+        }
+    }, [season, episode]);
+
+    useEffect(() => {
         if (videoId) {
-            // La carga previa del video
-            const videoElement = document.createElement('iframe');
-            videoElement.src = `https://drive.google.com/file/d/${videoId}/preview`;
-            videoElement.style.display = 'none'; // No mostrarlo
-            document.body.appendChild(videoElement); // Agregarlo al DOM
-            videoElement.onload = () => {
-                setLoading(false); // Marcar el video como listo para mostrar
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            iframe.onload = () => {
+                setLoading(false);
+                document.body.removeChild(iframe); // Limpieza del iframe oculto
             };
         }
     }, [videoId]);

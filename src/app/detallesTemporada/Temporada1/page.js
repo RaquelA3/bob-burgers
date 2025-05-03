@@ -154,7 +154,7 @@ const detallesTemporada = () => {
                                 <button
                                 key={index}
                                 className="episodioBtn"
-                                onClick={() => router.push('/reproductorvideo')}
+                                onClick={() => router.push(`/reproductorvideo?season=1&episode=${index + 1}`)}
                                 >
                                 {ep}
                                 </button>
