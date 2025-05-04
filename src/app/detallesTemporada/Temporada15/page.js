@@ -122,47 +122,34 @@ const detallesTemporada = () => {
 
 
             <div className="contenedor-temporada">
-                 <img className="imagenTemporada" src={imagenesTemporadas.temp5} alt="imagenT"/>  
+                 <img className="imagenTemporada" src={imagenesTemporadas.temp15} alt="imagenT"/>  
                  
                  <div className="detalles-temporada">
                      <h1 className="titulo-serie">Bob Burgers</h1>
-                     <h2 className="titulo-temporada">Temporada 5</h2>
+                     <h2 className="titulo-temporada">Temporada 15</h2>
                      <label className="descripcion-temporada">A tiny VS Code extension made up of a few commands that generate and insert lorem ipsum text into a text file. To use the extension, open the command palette (F1 or cmd/ctrl+shift+p, type "lorem ipsum" and select to insert either a line or paragraph.</label>
 
                         <div className="cuadro-episodiosTemporada">
                             <h2 className="episodiosTitulo">Episodios</h2>
                             {[
-                                'Episode 1 "Trabaja duro o muere en el intento, chica"',
-                                'Episode 2 "Tina y el verdadero fantasma"',
-                                'Episode 3 "Amigos con Burger-fits"',
-                                'Episode 4 "Amanecer del picoteo"',
-                                'Episode 5 "La mejor hamburguesa"',
-                                'Episode 6 "Padre de la Bob"',
-                                'Episode 7 "Tina Sastre Soldado Espía"',
-                                'Episode 8 "Carrera del mediodía"',
-                                'Episode 9 "Jinete clandestino"',
-                                'Episode 10 "Tarde en el jardín de Bob y Louise"',
+                                'Episode 1 "La Mesa Tina: Las Mesas Tienen Tina-ed"',
+                                'Episode 2 "Guardar Drive-In favorito"',
+                                'Episode 3 "Colon-ly el Dronely"',
+                                'Episode 4 "¿Por quién los dedos de los pies de la muñeca?"',
+                                'Episode 5 "No dejes de ser cursi"',
+                                'Episode 6 "Noche de Hope N\' Mic"',
+                                'Episode 7 "Días de Boogie"',
+                                'Episode 8 "Golpean a los caballos, ¿no?"',
+                                'Episode 9 "Perro Navidad Día Después de la Tarde"',
+                                'Episode 10 "Consejo: Las cosas son ad-nice"',
+                                'Episode 11 "La obra del señor Fischoeder"',
 
-                                'Episode 11 "No puedes comprarme matemáticas"',
-                                'Episode 12 "La candidata de Millie-churian"',
-                                'Episode 13 "Los cuentos de Gayle"',
-                                'Episode 14 "Papá Duro"',
-                                'Episode 15 "Aventuras en Chinchilla-sitting"',
-                                'Episode 16 "El Club de la Pasarela"',
 
-                                'Episode 17 "El Comité de la Cancioncilla Itty Bitty"',
-                                'Episode 18 "Comer, rociar, Linda"',
-                                'Episode 19 "Trampa doméstica"',
-                                'Episode 20 "Halcón y polluelo"',
-
-                                'Episode 21 "Los juegos de Oeder"',
-
-  
                             ].map((ep, index) => (
                                 <button
                                 key={index}
                                 className="episodioBtn"
-                                onClick={() => router.push(`/reproductorvideo?season=5&episode=${index + 1}`)}
+                                onClick={() => router.push(`/reproductorvideo?season=15&episode=${index + 1}`)}
                                 >
                                 {ep}
                                 </button>

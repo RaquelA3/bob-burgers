@@ -170,6 +170,7 @@
   
   .sidebar-item:hover {
     background-color: #8be374;
+    /* background-color: #2fe900;  */
   }
   
   .sidebar-item img {
@@ -266,7 +267,7 @@
   
     .tituloE {
       height: 36px;
-      margin: 0 auto;
+      margin-left: 20%;
     }
   
     .user {
@@ -279,13 +280,13 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: -30px;
+      margin-top: -25px;
       padding: 0 10px;
     }
   
     .carrusel-img {
-      width: 140px;
-      height: 200px;
+      width: 165px;
+      height: auto;
     }
   
     .episodios {

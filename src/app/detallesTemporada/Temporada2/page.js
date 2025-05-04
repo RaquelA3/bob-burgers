@@ -62,7 +62,7 @@ const detallesTemporada = () => {
 
                     <span className="section-title">MENU</span>
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/base') }>
                     <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
                     <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
@@ -89,7 +89,7 @@ const detallesTemporada = () => {
                         <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
-                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>        
+                        <span onClick={() => router.push('/detallesTemporada/Temporada15')}>Season 15</span>        
                     </div>
                     )}
 
@@ -101,19 +101,13 @@ const detallesTemporada = () => {
 
                     <span className="section-title">GENERAL</span>
                     
-                    <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "settings" ? "" : "settings")}>
-                    <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
-                    <span>Settings</span>
-                    <span className="arrow">{submenuAbierto === "settings" ? "▲" : "▼"}</span>
+                    <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
+                        <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-                    {submenuAbierto === "settings" && (
-                    <div className="submenu">
-                        <span>Sub Item 01</span>
-                        <span>Sub Item 02</span>
-                    </div>
-                    )}
 
-                    <div className="sidebar-item">
+
+                    <div className="sidebar-item"  onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
                     <span onClick={() => router.push('/inicio') }>Log out</span>
                     </div>

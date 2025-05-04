@@ -113,7 +113,7 @@ const Base = () => {
                    
                     <span className="section-title">MENU</span>
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/base') }>
                     <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
                     <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
@@ -140,7 +140,7 @@ const Base = () => {
                         <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
-                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>        
+                        <span onClick={() => router.push('/detallesTemporada/Temporada15')}>Season 15</span>        
                     </div>
                     )}
 
@@ -152,19 +152,13 @@ const Base = () => {
 
                     <span className="section-title">GENERAL</span>
                     
-                    <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "settings" ? "" : "settings")}>
-                    <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
-                    <span>Settings</span>
-                    <span className="arrow">{submenuAbierto === "settings" ? "▲" : "▼"}</span>
+                    <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
+                        <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-                    {submenuAbierto === "settings" && (
-                    <div className="submenu">
-                        <span>Sub Item 01</span>
-                        <span>Sub Item 02</span>
-                    </div>
-                    )}
 
-                    <div className="sidebar-item">
+
+                    <div className="sidebar-item"  onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
                     <span onClick={() => router.push('/inicio') }>Log out</span>
                     </div>
@@ -202,7 +196,6 @@ const Base = () => {
                         <label>Episode {index + 1}</label>
                         {index === 0 ? (
                         <a
-                            /* href="https://drive.google.com/file/d/1_ve0IHgyx5QFII3NYjXw-67ffyx400u1/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         > 
@@ -212,7 +205,6 @@ const Base = () => {
 
                         ) : index === 1 ? (
                         <a
-                           /*  href="https://drive.google.com/file/d/1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -221,7 +213,6 @@ const Base = () => {
 
                         ) : index === 2 ? (
                         <a
-                            /* href="https://drive.google.com/file/d/1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                          >
@@ -230,7 +221,6 @@ const Base = () => {
 
                         ) : index === 3 ? (
                         <a
-                          /*   href="https://drive.google.com/file/d/1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -239,7 +229,6 @@ const Base = () => {
 
                         ) : index === 4 ? (
                         <a
-                            /* href="https://drive.google.com/file/d/18sP_92PnvX8y7rUa4mOYv97syDCcYlXA/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -248,7 +237,6 @@ const Base = () => {
 
                         ) : index === 5 ? (
                         <a
-                           /*  href="https://drive.google.com/file/d/1zZaNn0e0l5O2_Ln7OUefk_vslh_mwueZ/view?usp=sharing" */
                             target="_blank"
                             rel="noopener noreferrer"
                         >

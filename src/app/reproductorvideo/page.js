@@ -51,9 +51,81 @@ const ReproductorV = () => {
             1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
             2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
             3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        4: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        5: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        6: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        7: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        8: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        9: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        10: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        11: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        12: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        13: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        14: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+        },
+
+        
+        15: {
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
         }
 
-        //Aqui pongo las demas temporadas
     };
 
     //Esto busca el video, a travez de la temporada y el episodio,
@@ -112,7 +184,7 @@ const ReproductorV = () => {
 
                     <span className="section-title">MENU</span>
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/base') }>
                     <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
                     <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
@@ -139,7 +211,7 @@ const ReproductorV = () => {
                         <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
-                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>  
+                        <span onClick={() => router.push('/detallesTemporada/Temporada15')}>Season 15</span>  
                     </div>
                     )}
 
@@ -150,19 +222,12 @@ const ReproductorV = () => {
 
                     <span className="section-title">GENERAL</span>
                     
-                    <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "settings" ? "" : "settings")}>
-                    <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
-                    <span>Settings</span>
-                    <span className="arrow">{submenuAbierto === "settings" ? "▲" : "▼"}</span>
+                    <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
+                        <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-                    {submenuAbierto === "settings" && (
-                    <div className="submenu">
-                        <span>Sub Item 01</span>
-                        <span>Sub Item 02</span>
-                    </div>
-                    )}
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
                     <span onClick={() => router.push('/inicio') }>Log out</span>
                     </div>

@@ -63,7 +63,7 @@ const Temporadas = () => {
 
                     <span className="section-title">MENU</span>
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/base') }>
                     <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
                     <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
@@ -102,19 +102,12 @@ const Temporadas = () => {
 
                     <span className="section-title">GENERAL</span>
                     
-                    <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "settings" ? "" : "settings")}>
-                    <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
-                    <span>Settings</span>
-                    <span className="arrow">{submenuAbierto === "settings" ? "▲" : "▼"}</span>
+                    <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
+                        <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-                    {submenuAbierto === "settings" && (
-                    <div className="submenu">
-                        <span>Sub Item 01</span>
-                        <span>Sub Item 02</span>
-                    </div>
-                    )}
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
                     <span onClick={() => router.push('/inicio') }>Log out</span>
                     </div>
@@ -148,7 +141,7 @@ const Temporadas = () => {
                      <img className="Temporada12" src={imagenesTemporadas.temp12} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada12')}/>  
                      <img className="Temporada13" src={imagenesTemporadas.temp13} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada13')}/>  
                      <img className="Temporada14" src={imagenesTemporadas.temp14} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada14')}/>  
-                     <img className="Temporada15" src={imagenesTemporadas.temp15} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada14')}/>        
+                     <img className="Temporada15" src={imagenesTemporadas.temp15} alt="icono menu" onClick={() => router.push('/detallesTemporada/Temporada15')}/>        
                 </div>
 
         </div>

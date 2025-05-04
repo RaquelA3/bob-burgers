@@ -62,7 +62,7 @@ const detallesTemporada = () => {
 
                     <span className="section-title">MENU</span>
 
-                    <div className="sidebar-item">
+                    <div className="sidebar-item" onClick={() => router.push('/base') }>
                     <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
                     <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
@@ -89,7 +89,7 @@ const detallesTemporada = () => {
                         <span onClick={() => router.push('/detallesTemporada/Temporada12')}>Season 12</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada13')}>Season 13</span>
                         <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 14</span>
-                        <span onClick={() => router.push('/detallesTemporada/Temporada14')}>Season 15</span>        
+                        <span onClick={() => router.push('/detallesTemporada/Temporada15')}>Season 15</span>        
                     </div>
                     )}
 
@@ -101,19 +101,13 @@ const detallesTemporada = () => {
 
                     <span className="section-title">GENERAL</span>
                     
-                    <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "settings" ? "" : "settings")}>
-                    <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
-                    <span>Settings</span>
-                    <span className="arrow">{submenuAbierto === "settings" ? "▲" : "▼"}</span>
+                    <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
+                        <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-                    {submenuAbierto === "settings" && (
-                    <div className="submenu">
-                        <span>Sub Item 01</span>
-                        <span>Sub Item 02</span>
-                    </div>
-                    )}
 
-                    <div className="sidebar-item">
+
+                    <div className="sidebar-item"  onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
                     <span onClick={() => router.push('/inicio') }>Log out</span>
                     </div>
@@ -138,16 +132,34 @@ const detallesTemporada = () => {
                         <div className="cuadro-episodiosTemporada">
                             <h2 className="episodiosTitulo">Episodios</h2>
                             {[
-                                'Episode 1 "Los Belchies"',
-                                'Episode 2 "Bob Day Tarde"',
-                                'Episode 3 "Natación sincronizada"',
-                                'Episode 4 "Jefe de hamburguesas"',
-                                'Episode 5 "Camiones de comida"',
-                                'Episode 6 "Dr. Yap"',
-                                'Episode 7 "Foodie malhumorado"',
-                                'Episode 8 "Mala Tina"',
-                                'Episode 9 "Carne de vacuno"',
-                                
+                                'Episode 1 "Jinete de orejas"',
+                                'Episode 2 "Barras Completas"',
+                                'Episode 3 "Bob despide a los niños"',
+                                'Episode 4 "Motín en el cortavientos"',
+                                'Episode 5 "Una propuesta de matrimonio Dia de Acción de Gracias"',
+                                'Episode 6 "La profundización"',
+                                'Episode 7 "Naufragios de Tinarannosaurus"',
+                                'Episode 8 "La insoportable semejanza del Gene"',
+                                'Episode 9 "¡Que Dios descanse en vosotros alegres maniquíes"',
+                                'Episode 10 "Maquinilla de afeitar láser madre hija"',
+
+                                'Episode 11 "Playa Nudista"',
+                                'Episode 12 "Transmisión de noticias de la escuela Wagstaff"',
+                                'Episode 13 "Mi San Valentín peludo"',
+                                'Episode 14 "Linda Mujer Colgante"',
+                                'Episode 15 "O.T. El aseo exterior"',
+                                'Episode 16 "Topsy"',
+
+                                'Episode 17 "Dos para Tina"',
+                                'Episode 18 "Serpentea un pueblo"',
+                                'Episode 19 "Pelea familiar"',
+                                'Episode 20 "Los niños dirigen el restaurante"',
+
+                                'Episode 21 "Boyz 4 Ahora"',
+                                'Episode 22 "Museo Carpe"',
+                                'Episode 23 "Lo antinatural"',
+
+  
                             ].map((ep, index) => (
                                 <button
                                 key={index}
