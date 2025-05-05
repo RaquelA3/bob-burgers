@@ -2,46 +2,30 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import '../../styles/detallestemporada.css';
+import '../styles/favoritos.css';
 
-const detallesTemporada = () => {
-    const router = useRouter();
-    const [menuAbierto, setMenuAbierto] = useState(false);
-    const [submenuAbierto, setSubmenuAbierto] = useState("");
+const favoritos = () => {
+   const router = useRouter();
+   const [menuAbierto, setMenuAbierto] = useState(false);
+   const [submenuAbierto, setSubmenuAbierto] = useState("");
 
-    const imagenes = {
-        iconomenu:  "../img/icon-menuDesplegable.png",
-        tituloE: "../img/tituloEncabezado.webp",
-        user: "../img/foto-user.png", 
-        iconEpisodio: "../img/episodioGeneral.jpg",
-        logomenu: "../img/logo.ico",
-        home: "../img/home.png",
-        lista: "../img/lista.png",
-        favoritos: "../img/favoritos.png",
-        configuracion: "../img/configuracion.png",
-        salir: "../img/salir.png"
-    }
+   const imagenes = {
+       iconomenu:  "../img/icon-menuDesplegable.png",
+       tituloE: "../img/tituloEncabezado.webp",
+       user: "../img/foto-user.png", 
+       iconEpisodio: "../img/episodioGeneral.jpg",
+       logomenu: "../img/logo.ico",
+       home: "../img/home.png",
+       lista: "../img/lista.png",
+       favoritos: "../img/favoritos.png",
+       configuracion: "../img/configuracion.png",
+       salir: "../img/salir.png",
+       logonegro: "../img/logonegro.png",
+       casa: "../img/casa.png"
+   }
 
-    const imagenesTemporadas = {
-        temp1: "../img/Temp1.png",
-        temp2: "../img/Temp2.webp",
-        temp3: "../img/Temp3.webp",
-        temp4: "../img/Temp4.webp",   
-        temp5: "../img/Temp5.webp",   
-        temp6: "../img/Temp6.webp",   
-        temp7: "../img/Temp7.webp",   
-        temp8: "../img/Temp8.webp",   
-        temp9: "../img/Temp9.webp",   
-        temp10: "../img/Temp10.png",   
-        temp11: "../img/Temp11.webp",   
-        temp12: "../img/Temp12.webp",   
-        temp13: "../img/Temp13.webp",   
-        temp14: "../img/Temp14.webp",   
-        temp15: "../img/Temp15.webp",   
-    };
-
-    return (
-        <div className="bob-container5">
+  return (
+      <div className="bob-container6">
              <link rel="icon" href="/img/logo.ico"></link>
              <header className="encabezado">
              <img className="menu" src={imagenes.iconomenu} alt="icono menu" onClick={() => setMenuAbierto(!menuAbierto)}/>  
@@ -49,8 +33,9 @@ const detallesTemporada = () => {
                  <img className="user" src={imagenes.user} alt="foto usuario" onClick={() => router.push('/inicio')}/>  
              </header>
 
-             {/* Esto es del menu desplegable */}
-             {menuAbierto && (
+
+              {/* Esto es del menu desplegable */}
+              {menuAbierto && (
                 <div className="sidebar">
                     <div className="sidebar-header">
                     <img className="Logomenu" src={imagenes.logomenu} alt="icono menu"/>  
@@ -98,6 +83,7 @@ const detallesTemporada = () => {
                         <span  onClick={() => router.push('/favoritos')}>Favorites</span>
                     </div>
 
+
                     <span className="section-title">GENERAL</span>
                     
                     <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
@@ -121,47 +107,32 @@ const detallesTemporada = () => {
 
 
             <div className="contenedor-temporada">
-                 <img className="imagenTemporada" src={imagenesTemporadas.temp5} alt="imagenT"/>  
                  
                  <div className="detalles-temporada">
-                     <h1 className="titulo-serie">Bob Burgers</h1>
-                     <h2 className="titulo-temporada">Temporada 5</h2>
-                     <label className="descripcion-temporada">A tiny VS Code extension made up of a few commands that generate and insert lorem ipsum text into a text file. To use the extension, open the command palette (F1 or cmd/ctrl+shift+p, type "lorem ipsum" and select to insert either a line or paragraph.</label>
-
-                        <div className="cuadro-episodiosTemporada">
+                     <h1 className="titulo-serie">Lista de Favoritos:</h1>
+                     <img className="logoN" src={imagenes.logonegro}></img>  
+                     <img className="casa" src={imagenes.casa}></img>
+                         <div className="cuadro-episodiosTemporada">
                             <h2 className="episodiosTitulo">Episodios</h2>
+
                             {[
-                                'Episode 1 "Trabaja duro o muere en el intento, chica"',
-                                'Episode 2 "Tina y el verdadero fantasma"',
-                                'Episode 3 "Amigos con Burger-fits"',
-                                'Episode 4 "Amanecer del picoteo"',
-                                'Episode 5 "La mejor hamburguesa"',
-                                'Episode 6 "Padre de la Bob"',
-                                'Episode 7 "Tina Sastre Soldado Espía"',
-                                'Episode 8 "Carrera del mediodía"',
-                                'Episode 9 "Jinete clandestino"',
-                                'Episode 10 "Tarde en el jardín de Bob y Louise"',
-
-                                'Episode 11 "No puedes comprarme matemáticas"',
-                                'Episode 12 "La candidata de Millie-churian"',
-                                'Episode 13 "Los cuentos de Gayle"',
-                                'Episode 14 "Papá Duro"',
-                                'Episode 15 "Aventuras en Chinchilla-sitting"',
-                                'Episode 16 "El Club de la Pasarela"',
-
-                                'Episode 17 "El Comité de la Cancioncilla Itty Bitty"',
-                                'Episode 18 "Comer, rociar, Linda"',
-                                'Episode 19 "Trampa doméstica"',
-                                'Episode 20 "Halcón y polluelo"',
-
-                                'Episode 21 "Los juegos de Oeder"',
-
-  
+                                'Episode 1 "Carne Humana"',
+                                'Episode 2 "Sótano"',
+                                'Episode 3 "Vaca Sagrada"',
+                                'Episode 4 "Lucha de baile sexy"',
+                                'Episode 5 "Teatro con cena de hamburguesas"',
+                                'Episode 7 "Alojamiento y desayuno"',
+                                'Episode 8 "Rastreo de arte"',
+                                'Episode 9 "Espaguetis Western y albóndigas"',
+                                'Episode 10 "Guerra de hamburguesas"',
+                                'Episode 11 "Fin de semana en casa de Mort"',
+                                'Episode 12 "Fiesta de la langosta"',
+                                'Episode 13 "Torpedo"',
                             ].map((ep, index) => (
                                 <button
                                 key={index}
                                 className="episodioBtn"
-                                onClick={() => router.push(`/reproductorvideo?season=5&episode=${index + 1}`)}
+                                onClick={() => router.push(`/reproductorvideo?season=1&episode=${index + 1}`)}
                                 >
                                 {ep}
                                 </button>
@@ -170,9 +141,14 @@ const detallesTemporada = () => {
 
                 </div>
             </div>
-            
+
+
+
+
+
+
         </div>
     )
 }
 
-export default detallesTemporada;
+export default favoritos;

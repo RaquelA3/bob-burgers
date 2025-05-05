@@ -1,0 +1,518 @@
+.bob-container6 {
+    background-color: #C8D9C4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+  
+    width: 100vw;
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    overflow-y: auto;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  .encabezado{
+    background-color: #24D018;
+    padding: 10px 20px;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+  }
+
+  .menu{
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .tituloE{
+    height: 50px;
+    margin: 0 20px;
+  }
+
+  .user{
+    height: 40px;
+    border-radius: 50%;
+  }
+
+
+  /* Estilos para el menu desplegable */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 210px;
+    background-color: #9AF785;
+    color: black;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .Logomenu {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .titulo-menuD {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    flex-grow: 1;
+    white-space: nowrap;
+    margin-left: -4%;
+    font-weight: 100;
+  }
+  
+  .close-btn {
+    background: none;
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .section-title {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px 5px;
+  }
+
+  .section-title2 {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px 5px;
+    text-align: center;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #8be374;
+  }
+  
+  .sidebar-item img {
+    height: 18px;
+    width: 20px;
+  }
+  
+  .sidebar-item span {
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  .arrow {
+    margin-left: auto;
+    font-size: 12px;
+  }
+  
+  .submenu {
+    padding-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+  }
+  
+  .submenu span {
+    display: block;
+    padding: 6px 0;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  .submenu span:hover {
+    color: white;
+  }
+  
+  .LogoM2{
+    height: 20px;
+    width: 20px;
+    margin-left: 20%;
+  }
+
+  .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .logoU {
+    height: 98px !important;
+    width: 80px !important;
+    object-fit: cover;
+  }
+  
+
+  .name-user{
+    margin-top: 0px;
+    font-size: 14px;
+  }
+
+
+
+
+/* Estilo de los detalles de la temporada */
+.contenedor-temporada {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: -10px;
+    margin-left: -65%;
+    padding: 0 20px;
+  }
+  
+  /* Imagen de la temporada */
+  .imagenTemporada {
+    width: 270px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin-top: 30.5%;
+    margin-left: -21.5%;
+  }
+  
+  /* Contenedor de los detalles (título, descripción, episodios) */
+  .detalles-temporada {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 40%;
+  }
+  
+  /* Título de la serie */
+  .titulo-serie {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 76%;
+    margin-left: -48%;
+    font-weight: 100;
+    color: #000;
+    text-align: left;
+  }
+  
+  /* Título de temporada */
+  .titulo-temporada {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-top: -5%;
+    color: #000;
+    text-align: left;
+    margin-left: -57%;
+    font-weight: 100;
+  }
+  
+  /* Descripción */
+  .descripcion-temporada {
+    font-family: sans-serif;
+    font-size: 11;
+    display: block;
+    margin: -15 auto 20px auto;
+    margin-left: 9%;
+    width: 500px;
+    color: #444;
+    text-align: justify;
+  }
+  
+
+
+  /* Contenedor de episodios */
+  .cuadro-episodiosTemporada {
+    background-color: #fff0f8;
+    border: 1px solid #ccc;
+    padding: 10px 20px 20px 20px; 
+    width: 450%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    margin-top: -5%;
+    margin-left: 310%;
+    max-height: 310px; 
+    overflow-y: auto;  
+  }
+  
+
+/* Título */
+.episodiosTitulo {
+  background-color: #56FF14;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 0 10px 0; /* Quita margen superior */
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/* Botones de episodio */
+.episodioBtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 11px;
+  color: #333;
+  margin-left: 1%;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid #ddd;
+}
+
+.episodioBtn:hover {
+  color: #0070f3;
+  text-decoration: underline;
+}
+
+.logoN{
+    width: 100%;
+    height: auto;
+    margin-left: 180%;
+    margin-top: -40%;
+}
+
+.casa {
+    position: absolute;
+    top: 150px; 
+    right: 25px; 
+    width: 200px; 
+    height: auto;
+  }
+  
+
+
+
+
+
+
+
+ /* Responsivo version celular*/
+ @media (max-width: 768px) {
+    /* Estilo del encabezado*/
+    .bob-container6 {
+        min-height: 100vh;
+        padding-top: 80px; 
+        justify-content: flex-start;
+        background-image: url("/img/casa.png");
+        /* background-color: #C8D9C4; */
+        background-size: cover;         /* Ajusta la imagen al contenedor */
+        background-repeat: no-repeat;   /* Evita que se repita */
+        background-position: center;    /* Centra la imagen */
+      }
+      
+ 
+   .encabezado {
+     flex-direction: row;
+     flex-wrap: wrap;
+     padding: 8px 12px;
+     width: 100%;
+     gap: 10px;
+   }
+ 
+   .menu {
+     width: 20px;
+     height: auto;
+     position: relative;
+     left: 26px;
+     transform: translateY(10%); 
+   }
+ 
+   .tituloE {
+     height: 36px;
+     margin: 0 auto;
+     margin-left: 28%;
+   }
+ 
+   .user {
+     height: 30px;
+     position: relative;
+     right: 15px;
+   }
+ 
+ 
+   /* Estilos del menu desplegable*/
+   .sidebar {
+     width: 40vw; 
+     padding: 16px;
+   }
+ 
+   .sidebar-header {
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+   }
+   
+   .Logomenu {
+     height: 40px;
+     margin-left: -8%;
+   }
+ 
+   .titulo-menuD {
+     font-size: 16px;
+     margin-left: -16px;
+     flex-grow: 1;
+     font-weight: 500;
+   }
+ 
+   .close-btn img,
+   .icono-cerrar {
+     height: 20px;
+     width: 20px;
+   }
+ 
+   .section-title {
+     font-size: 13px;
+     margin-left: 2px;
+   }
+ 
+   .sidebar-item {
+     gap: 8px;
+     padding: 6px 4px;
+   }
+ 
+   .sidebar-item img {
+     height: 16px;
+     width: 18px;
+   }
+ 
+   .sidebar-item span {
+     font-size: 13px;
+   }
+ 
+   .submenu span {
+     font-size: 12px;
+   }
+ 
+   .user {
+     display: flex;
+     flex-direction: column;
+     padding: 10px 0;
+     text-align: center;
+     align-items: center;
+     margin-left: 15%;
+   }
+ 
+   .logoU {
+     height: 120px !important;  
+     width: 100px !important;
+     align-items: center;
+   }
+ 
+   .name-user {
+     font-size: 13px;
+     margin-top: 8px;
+   }
+
+     /* Contenedor general */
+  .contenedor-temporada {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .imagenTemporada {
+    width: 90%;
+    margin: 20px 0 0 0;
+  }
+
+  .detalles-temporada {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .titulo-serie {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+
+  .titulo-temporada {
+    font-size: 14px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .descripcion-temporada {
+    font-size: 12px;
+    width: 100%;
+    margin: 10px auto;
+    margin-left: 0;
+    text-align: justify;
+  }
+
+  .cuadro-episodiosTemporada {
+    width: 85%;
+    margin: 20px 0;
+    margin-left: -5%;
+    margin-top: -2%;
+    padding: 15px;
+    max-height: 450px;
+  }
+
+  .episodiosTitulo {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .episodioBtn {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+
+  .logoN {
+    width: 60%;
+    margin: -20px auto 0 auto;
+  }
+
+  .casa {
+    display: none;
+  }
+ 
+ } 

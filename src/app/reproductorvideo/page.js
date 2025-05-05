@@ -215,9 +215,9 @@ const ReproductorV = () => {
                     </div>
                     )}
 
-                    <div className="sidebar-item">
-                    <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"/>  
-                    <span> Favorites</span>
+                    <div className="sidebar-item" onClick={() => router.push('/favoritos')}>
+                        <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"  onClick={() => router.push('/favoritos')}/>  
+                        <span  onClick={() => router.push('/favoritos')}>Favorites</span>
                     </div>
 
                     <span className="section-title">GENERAL</span>

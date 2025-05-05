@@ -93,11 +93,10 @@ const detallesTemporada = () => {
                     </div>
                     )}
 
-                    <div className="sidebar-item">
-                    <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"/>  
-                    <span> Favorites</span>
+                    <div className="sidebar-item" onClick={() => router.push('/favoritos')}>
+                        <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"  onClick={() => router.push('/favoritos')}/>  
+                        <span  onClick={() => router.push('/favoritos')}>Favorites</span>
                     </div>
-
 
                     <span className="section-title">GENERAL</span>
                     
@@ -105,7 +104,6 @@ const detallesTemporada = () => {
                         <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
                         <span onClick={() => router.push('/configuracion')}>Settings</span>
                     </div>
-
 
                     <div className="sidebar-item"  onClick={() => router.push('/inicio') }>
                     <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
