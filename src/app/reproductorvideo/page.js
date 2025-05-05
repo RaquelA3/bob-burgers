@@ -35,16 +35,22 @@ const ReproductorV = () => {
     const videoLinks = {
         //Temporada 1
         1: {
-            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
-            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
-            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t',  //Cambiar este link
+            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',  //Cambiar este link
+            3: '15Dnw_SvVSO1RL1jItRhP_KPVDNVNFEei',  //Link correcto
         },
 
         //2 Temporada
         2: {
-            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', 
-            2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
-            3: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', //Cambiar este link
+            2: '1Lt9HZR2CEOW_aflZx74uvrQHIPQT7F1E',
+            3: '1_ve0IHgyx5QFII3NYjXw-67ffyx400u1',
+            4: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
+            5: '1v_2QzQh8q3ivwH3wJG0DMNuFQ0gZxntW',
+            6: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t',
+            7: '18sP_92PnvX8y7rUa4mOYv97syDCcYlXA',
+            8: '1zZaNn0e0l5O2_Ln7OUefk_vslh_mwueZ',
+            9: '1N3MquGxG-hqwoKHdL2R5Ruei8PniPopM',
         },
 
         3: {
