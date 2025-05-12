@@ -35,14 +35,15 @@ const ReproductorV = () => {
     const videoLinks = {
         //Temporada 1
         1: {
-            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t',  //Cambiar este link
+            1: '1AsJLtXd8cgrXJ8TYGfZbF3K_vKvcw-yW',  //Link correcto
             2: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',  //Cambiar este link
             3: '15Dnw_SvVSO1RL1jItRhP_KPVDNVNFEei',  //Link correcto
+            4: '1RyRBmNW_eNFQCNkiGtI_lOXo1FfQEked'   //Link correcto
         },
 
-        //2 Temporada
+        //2 Temporada Lista
         2: {
-            1: '1JwaFNARqgBnmkZjjT-agzw5EyB0sBY-t', //Cambiar este link
+            1: '1wdYAoo0FWcuB9A68wFBlKpNLrIdBHgDf',
             2: '1Lt9HZR2CEOW_aflZx74uvrQHIPQT7F1E',
             3: '1_ve0IHgyx5QFII3NYjXw-67ffyx400u1',
             4: '1R-i7XpqKZt19bjMZi1lQYlHABPD9_9dp',
