@@ -1,8 +1,8 @@
 import { useRouter } from 'next/navigation'; 
-import '../styles/inicio.css';
+import '/src/app/styles/inicio.css';
 import Image from 'next/image'; 
 
-const Inicio = () => {
+export default Inicio() {
   const router = useRouter();  // Sirve para navegar entre las páginas
 
   const imagenes = {
@@ -38,6 +38,5 @@ const Inicio = () => {
     
     </div>
   );
-};
+}
 
-export default Inicio;
