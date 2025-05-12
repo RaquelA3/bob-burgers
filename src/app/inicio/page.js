@@ -14,7 +14,7 @@ const Inicio = () => {
   return (
     <div className='bob-container'>
       <h1 className='titulo-principal'>BOB BURGERS</h1>
-      <link rel="icon" href="/img/logo.ico" />
+
       <div className='form-temporada'>
         <img className='icon' src={imagenes.iconotemporada} alt='icono temporada'></img>
         <span className='temp'>14 temporada</span>
