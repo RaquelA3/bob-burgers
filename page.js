@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation'; 
-import '../styles/inicio.css';
+import '/src/app/styles/inicio.css';
 import Image from 'next/image'; 
 
 const Inicio = () => {
