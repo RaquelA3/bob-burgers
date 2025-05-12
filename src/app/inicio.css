@@ -1,0 +1,201 @@
+.bob-container {
+    background-image: url("/img/FondoInicio.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  
+    width: 100vw;
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* IMPORTANTE para que los hijos posicionados absolutos funcionen bien */
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .bob-header {
+    position: relative;
+  }
+  
+  /* Título principal */
+  .titulo-principal {
+    position: absolute;
+    top: 0;
+    transform: translateY(-32%);
+    left: 3%;
+    font-size: 2.5rem;
+    color: #ffe100;
+    font-family: 'Roboto';
+  }
+  
+  /* Formulario temporada */
+  .form-temporada {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    position: absolute;
+    top: 60px;
+    left: 2.5%;
+    color: white;
+  }
+  
+  .form-temporada > .temp {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 100%;
+  }
+  
+  .form-temporada > .icon {
+    width: 34px;
+    height: 26px;
+  }
+  
+  
+  /* Fuente personalizada */
+  @font-face {
+    font-family: "Roboto";
+    src: url(fonts/RobotoSlab-Black.ttf) format("truetype");
+    font-weight: 900;
+  }
+  
+  /* Formulario registro/inicio */
+  .form-group label {
+    display: block;
+    color: white;
+  }
+  
+  .form-group > .registro {
+    position: absolute;
+    top: 10px; 
+    margin-left: 28%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 75%;
+  }
+  
+  .form-group > .inicio {
+    position: absolute;
+    top: 10px; 
+    margin-left: 39%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 75%;
+  }
+  
+  /* Botón comenzar */
+  .botonComenzar {
+    background-color: #ffd700;
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 420px;
+    left: 400px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: 2px solid white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .botonComenzar:hover{
+    background-color: orange;
+  }
+  
+  .botonComenzar:active{
+    background-color: orange;
+  }
+  
+  
+  
+  
+  
+  
+  /* Ajustes para pantallas pequeñas (celulares) */
+  @media (max-width: 768px) {
+    .bob-container {
+      background-image: url("/img/FondoC.png");
+      background-attachment: scroll; 
+      padding: 20px;
+      justify-content: flex-start; /* Empieza desde arriba */
+    }
+  
+    .bob-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .titulo-principal {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: translateX(-6.5%);
+      font-size: 3rem;
+      color: #ffe100;
+      margin-bottom: 10px;
+    }
+  
+    .form-temporada {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: translateX(-14%);
+      font-size: 1.2rem;
+      gap: 0px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    .form-group {
+      display: flex;
+      justify-content: center;
+      padding-top: 140px;
+      gap: 10px;
+      margin-bottom: 20px;
+      transform: translateX(-10%); /* Mueve todo el bloque a la derecha */
+    }
+    
+    .form-group > .registro,
+    .form-group > .inicio {
+      position: relative;
+      margin: 0;
+      font-size: 0.75rem;
+      color: rgb(255, 255, 255);
+    }
+    
+    .form-group > .inicio {
+      color: rgb(255, 255, 255);
+    }
+  
+    .botonComenzar {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: translateX(-10%);
+      font-size: 1.1rem;
+      padding: 10px 30px;
+      margin: 0 auto;
+      display: block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      color: #fffff9;
+      font-family: 'Roboto';
+    }
+  
+    .botonComenzar:hover{
+      background-color: orange;
+    }
+  
+    .botonComenzar:active{
+      background-color: orange;
+    }
+  
+  }
