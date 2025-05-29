@@ -151,23 +151,25 @@ const ReproductorV = () => {
 
     // Función para hacer que el video se cargue antes de mostrarlo
     useEffect(() => {
-        if (season && episode) {
-            handlePlay();
-        }
-    }, [season, episode]);
+    if (videoId) {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
 
-    useEffect(() => {
-        if (videoId) {
-            const iframe = document.createElement('iframe');
-            iframe.src = `https://drive.google.com/file/d/${videoId}/preview`;
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            iframe.onload = () => {
-                setLoading(false);
-                document.body.removeChild(iframe); // Limpieza del iframe oculto
-            };
+        iframe.onload = () => {
+        setLoading(false);
+        document.body.removeChild(iframe);
+        };
+
+        return () => {
+        // Cleanup en caso de que videoId cambie antes de cargar
+        if (document.body.contains(iframe)) {
+            document.body.removeChild(iframe);
         }
-    }, [videoId]);
+        };
+    }
+    }, [videoId]);    
 
     return (
          <div className='bob-container3'>
@@ -192,8 +194,8 @@ const ReproductorV = () => {
                     <span className="section-title">MENU</span>
 
                     <div className="sidebar-item" onClick={() => router.push('/base') }>
-                    <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
-                    <span className="Home" onClick={() => router.push('/base') }> Home</span>
+                    <img className="Logohome" src={imagenes.home} alt="icono menu"/>  
+                    <span className="Home"> Home</span>
                     </div>
 
                     <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "table" ? "" : "table")}>
@@ -223,20 +225,20 @@ const ReproductorV = () => {
                     )}
 
                     <div className="sidebar-item" onClick={() => router.push('/favoritos')}>
-                        <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu"  onClick={() => router.push('/favoritos')}/>  
-                        <span  onClick={() => router.push('/favoritos')}>Favorites</span>
+                        <img className="Logofavoritos" src={imagenes.favoritos} alt="icono menu" />  
+                        <span>Favorites</span>
                     </div>
 
                     <span className="section-title">GENERAL</span>
                     
                     <div className="sidebar-item" onClick={() => router.push('/configuracion')}>
-                        <img className="Logoconfiguracion" src={imagenes.configuracion} onClick={() => router.push('/configuracion')} alt="icono menu"/>  
-                        <span onClick={() => router.push('/configuracion')}>Settings</span>
+                        <img className="Logoconfiguracion" src={imagenes.configuracion} alt="icono menu"/>  
+                        <span>Settings</span>
                     </div>
 
                     <div className="sidebar-item" onClick={() => router.push('/inicio') }>
-                    <img className="Logosalir" src={imagenes.salir} alt="icono menu" onClick={() => router.push('/inicio')}/>  
-                    <span onClick={() => router.push('/inicio') }>Log out</span>
+                    <img className="Logosalir" src={imagenes.salir} alt="icono menu" />  
+                    <span>Log out</span>
                     </div>
 
                     <span className="section-title2">USER</span>
