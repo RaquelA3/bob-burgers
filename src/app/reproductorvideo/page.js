@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic';
+'use client';
 
-const ReproductorV = dynamic(() => import('./ReproductorV'), { ssr: false });
+import ReproductorV from './ReproductorV';
 
 export default function Page() {
   return <ReproductorV />;
