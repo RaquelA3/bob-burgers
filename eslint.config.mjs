@@ -15,6 +15,7 @@ const eslintConfig = [
     rules: {
       "@next/next/no-img-element": "off",
       "react/no-unescaped-entities": "off", // Desactiva error por comillas no escapadas
+      "jsx-a11y/alt-text": "off",
     },
   },
 ];
