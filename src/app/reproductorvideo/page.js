@@ -12,7 +12,6 @@ const ReproductorV = () => {
     const initialEpisode = searchParams.get('episode') || '';
 
     const [menuAbierto, setMenuAbierto] = useState(false);
-    const [submenuAbierto, setSubmenuAbierto] = useState("");
     const [season, setSeason] = useState(initialSeason);
     const [episode, setEpisode] = useState(initialEpisode);
     const [videoId, setVideoId] = useState('');
