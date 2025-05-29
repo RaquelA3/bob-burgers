@@ -10,11 +10,17 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Extiende las reglas básicas de Next.js
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
+      // Permite usar <img> en lugar de <Image> de Next.js
       "@next/next/no-img-element": "off",
-      "react/no-unescaped-entities": "off", // Desactiva error por comillas no escapadas
+
+      // Desactiva el error por usar comillas no escapadas en JSX
+      "react/no-unescaped-entities": "off",
+
+      // Desactiva el warning por no usar "alt" en imágenes
       "jsx-a11y/alt-text": "off",
     },
   },
