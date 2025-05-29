@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import '../styles/configuracion.css';
 
 const Configuracion = () => {
@@ -110,7 +110,7 @@ const Configuracion = () => {
                     <span className="section-title2">USER</span>
                     <div className="sidebar-item user">
                          <img className="logoU" src={imagenes.user} alt="icono menu"/>  
-                        <span className="name-user">Raquel Amezcua</span>
+                        <span className="name-user">Gandul</span>
                     </div>
                 </div>
                 )}

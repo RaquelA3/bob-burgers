@@ -166,7 +166,7 @@ const Base = () => {
                     <span className="section-title2">USER</span>
                     <div className="sidebar-item user">
                          <img className="logoU" src={imagenes.user} alt="icono menu"/>  
-                        <span className="name-user">Raquel Amezcua</span>
+                        <span className="name-user">Gandul</span>
                     </div>
                 </div>
                 )}

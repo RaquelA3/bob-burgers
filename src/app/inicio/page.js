@@ -17,7 +17,7 @@ const Inicio = () => {
 
       <div className='form-temporada'>
         <img className='icon' src={imagenes.iconotemporada} alt='icono temporada'></img>
-        <span className='temp'>14 temporada</span>
+        <span className='temp'>15 temporada</span>
       </div>
       
       <div className='form-group'>
