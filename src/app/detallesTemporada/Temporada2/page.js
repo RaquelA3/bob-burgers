@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import '../../styles/detallestemporada.css';
 
-const detallesTemporada = () => {
+const DetallesTemporada = () => {
     const router = useRouter();
     const [menuAbierto, setMenuAbierto] = useState(false);
     const [submenuAbierto, setSubmenuAbierto] = useState("");
@@ -159,4 +159,4 @@ const detallesTemporada = () => {
     )
 }
 
-export default detallesTemporada;
+export default DetallesTemporada;

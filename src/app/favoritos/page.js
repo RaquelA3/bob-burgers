@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState} from "react";
 import '../styles/favoritos.css';
 
-const favoritos = () => {
+const Favoritos = () => {
    const router = useRouter();
    const [menuAbierto, setMenuAbierto] = useState(false);
    const [submenuAbierto, setSubmenuAbierto] = useState("");
@@ -151,4 +151,4 @@ const favoritos = () => {
     )
 }
 
-export default favoritos;
+export default Favoritos;
