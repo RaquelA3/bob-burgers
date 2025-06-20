@@ -31,4 +31,5 @@
   "build": "next build",
   "export": "next export"
 }
+}
 
