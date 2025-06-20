@@ -102,11 +102,11 @@ const Base = () => {
            {menuAbierto && (
                 <div className="sidebar">
                     <div className="sidebar-header">
-                    <img className="Logomenu" src={imagenes.logomenu} alt="icono menu"/>  
-                    <h2 className="titulo-menuD">Bob Burgers</h2>  
-                    <button className="close-btn" onClick={() => setMenuAbierto(false)}>
-                       <img className="LogoM2" src={imagenes.iconomenu} alt="icono menu"/>  
-                    </button>
+                        <img className="Logomenu" src={imagenes.logomenu} alt="icono menu"/>  
+                        <h2 className="titulo-menuD">Bob Burgers</h2>  
+                        <button className="close-btn" onClick={() => setMenuAbierto(false)}>
+                        <img className="LogoM2" src={imagenes.iconomenu} alt="icono menu"/>  
+                        </button>
                     </div>
 
 
@@ -114,15 +114,16 @@ const Base = () => {
                     <span className="section-title">MENU</span>
 
                     <div className="sidebar-item" onClick={() => router.push('/base') }>
-                    <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
-                    <span className="Home" onClick={() => router.push('/base') }> Home</span>
+                        <img className="Logohome" src={imagenes.home} alt="icono menu" onClick={() => router.push('/base') }/>  
+                        <span className="Home" onClick={() => router.push('/base') }> Home</span>
                     </div>
 
                     <div className="sidebar-item" onClick={() => setSubmenuAbierto(submenuAbierto === "table" ? "" : "table")}>
-                    <img className="Logolista" src={imagenes.lista} alt="icono menu"/>  
-                    <span> Season list</span>
-                    <span className="arrow">{submenuAbierto === "table" ? "▲" : "▼"}</span>
+                        <img className="Logolista" src={imagenes.lista} alt="icono menu"/>  
+                        <span> Season list</span>
+                        <span className="arrow">{submenuAbierto === "table" ? "▲" : "▼"}</span>
                     </div>
+
                     {submenuAbierto === "table" && (
                     <div className="submenu">
                         <span onClick={() => router.push('/temporadas')}>Seasons</span>
