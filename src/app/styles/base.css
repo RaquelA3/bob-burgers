@@ -54,10 +54,10 @@
     gap: 20px;
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     padding: 0 20px;
     position: relative;
-    transform: translateY(10%);
+    transform: translateY(0%);
 }
 
 .carrusel-img {
