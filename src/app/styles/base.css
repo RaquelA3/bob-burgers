@@ -54,15 +54,15 @@
     gap: 20px;
     overflow: hidden;
     width: 100%;
-    max-width: 5000px;
+    max-width: 1200px;
     padding: 0 20px;
     position: relative;
     transform: translateY(10%);
 }
 
 .carrusel-img {
-    width: 210px;
-    height: 290px;
+    width: 260px;
+    height: 340px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
