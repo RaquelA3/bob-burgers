@@ -8,8 +8,12 @@
   
     width: 100%;
     max-width: 100vw;
+    overflow-x: hidden;
     display: flex;  
-    overflow-x: hidden;/* IMPORTANTE para que los hijos posicionados absolutos funcionen bien */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* IMPORTANTE para que los hijos posicionados absolutos funcionen bien */
   }
   
   body {
