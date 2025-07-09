@@ -6,7 +6,7 @@
     background-attachment: fixed;
 
   
-    width: 100vw;
+    width: 10vw;
     height: 100vh;
     display: flex;  
     flex-direction: column;
@@ -22,7 +22,7 @@
   .encabezado{
     background-color: #24D018;
     padding: 10px 20px;
-    width: 50%;
+    width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-between;
